@@ -13,10 +13,10 @@ function CreateOrders(props) {
 //     const [orderNumber, setOrderNumber]=useState(props.orders.length)
 // setOrderNumber(orderNumber+1)
 
-    const[clientName, setClientName]=useState('')
-    const [job, setJob]=useState('')
+    const [clientName, setClientName] = useState('')
+    const [job, setJob] = useState('')
     // const[price, setPrice]=useState(null)
-    const[payment, setPayment]=useState(null)
+    const [payment, setPayment] = useState(null)
     // const[debt, setDebt]=useState(null)
     // const[createAt, setCreateAt]=useState('')
     // const[sentToDoStatus, setSentToDoStatus]=useState(false)
@@ -32,7 +32,7 @@ function CreateOrders(props) {
 // const newOrder = {
 //     clientName:clientName,
 //     job:job,
-//     // price:price,
+//     price:price,
 //     payment:payment,
         // debt:debt,
         // createAt:createAt,
@@ -64,7 +64,7 @@ function CreateOrders(props) {
                             onChange={(event) => setClientName(event.target.value)}
                             value={clientName}
                             aria-label="Default select example">
-                            {props.orders.map(order=>
+                            {props.orders.map(order =>
                                 <option key={order._id}>{order.clientName}</option>
                             )}
                         </Form.Select>
@@ -72,7 +72,7 @@ function CreateOrders(props) {
                             onChange={(event) => setJob(event.target.value)}
                             value={job}
                             aria-label="Default select example">
-                            {props.orders.map(order=>
+                            {props.orders.map(order =>
                                 <option key={order._id}>{order.service.job}</option>
                             )}
                         </Form.Select>
